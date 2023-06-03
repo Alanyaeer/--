@@ -1,0 +1,63 @@
+<!-- 这种选择器是可以作用到子子孙孙的 -->
+<!-- <style>
+    .box #aa{  background: #aaf;  }
+</style>
+<div class="box">
+    <p>emmmmmmmmmm……</p>
+    <p>23333333333333333……</p>
+    <div>
+    <p>wwwwwwwwwwww</p>
+    <p id="aa">QQQQQQQQQQ</p>
+    </div>    
+</div> -->
+
+
+
+<!-- 这种选择器只能直接作用到儿子 -->
+
+
+<!-- <style>
+    .box>p{  background: #aaf;}
+</style>
+
+<div class="box">
+    <p>emmmmmmmmmm……</p>
+    <p>23333333333333333……</p> -->
+    <!-- 在div里的孙子就没有被作用到 -->
+    <!-- <div>
+        <p>wwwwwwwwwwww</p>
+        <p id="aa">QQQQQQQQQQ</p>
+    </div>    
+</div> -->
+
+
+
+<!-- 这种选择器只能选择紧接的元素，二者具有共同的父元素，只会选择一个相邻的匹配元素 -->
+<!-- <style>
+    h1+h2{   background: #aaf;  }
+
+</style>
+<div class="box">
+    <h1>ssssssssssssssss</h1>
+    <h2>emmmmmmmmmm……</h2>
+    <h1>23333333333333333……</h1>
+    <h2>23333333333333333……</h2>
+    <div>
+    <p>wwwwwwwwwwww</p>
+    <p id="aa">QQQQQQQQQQ</p>
+    </div>    
+</div> -->
+
+
+
+<!-- 他会直接匹配h1以后，相邻的兄弟</h2> -->
+<style>
+    h1~h2{   background: #aaf;   }
+</style>
+<div>
+    <h2>emmmmmmmmmm……</h2>
+    <h1>ssssssssssssssss</h1>
+    <h2>emmmmmmmmmm……</h2>
+    <p>wwwwwwwwwwww</p>
+    <h2>23333333333333333……</h2>
+<div>
